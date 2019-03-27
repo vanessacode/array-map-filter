@@ -11,8 +11,13 @@ Sortie attendue:
 
  */
 
+const array =  [7, -4, 2, 0, -10, 3, 11];
 function getPositiveNumbers(numbers) {
+  return numbers.filter(function(num){
+    return num >= 0;
+  })
 }
+console.log(getPositiveNumbers(array));
 
 // Si besoin, tu peux toujours visualiser le résultat avec console.log,
 // mais alors, il faut alors lancer l'exercice avec node filter/ex1
