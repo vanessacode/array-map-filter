@@ -50,11 +50,11 @@ En sortie: [
 ];
 
 function getFoodCategories(yourFood) {
-  yourFood.map(function (f){
-    if (f.isVegetarian === true) {
-      console.log(f.food + " is suitable for vegetarians");
+  return yourFood.map(function (f){
+    if (Object.values(f)[1] === true) {
+      return `${f.food} is suitable for vegetarians`
     } else {
-      console.log(f.food + " is not suitable for vegetarians");
+      return `${f.food} is not suitable for vegetarians`
     }
   })
 }

@@ -38,7 +38,7 @@ Sortie attendue:
 
 function filterOnPrice(product, maxPrice) {
   return product.filter(function (p) {
-    return p.price < maxPrice;
+    return p.price <= maxPrice;
   })
 }
 

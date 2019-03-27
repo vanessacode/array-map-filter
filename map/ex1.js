@@ -23,8 +23,8 @@ En sortie: [
 const food = ['Chicken', 'Bacon', 'Tofu', 'Mayonnaise'];
 
 function getStringsLength(strings) {
-    strings.map(function(str) {
-      console.log(str + ' contains ' + str.length + ' characters.');
+    return strings.map(function(str) {
+      return `${str} contains ${str.length} characters`
     })
 }
 getStringsLength(food);

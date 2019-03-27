@@ -76,8 +76,8 @@ const movies = [
     rating: 60
   }
 ]
-function getMoviesFreshness(theMovies) {
-  theMovies.map(function(movie){
+function getMoviesFreshness(movies) {
+  movies.map(function(movie){
     if (movie.rating < 60) {
       movie.label = 'rotten';
     } else if (movie.rating >= 60 && movie.rating <= 75) {
@@ -86,11 +86,10 @@ function getMoviesFreshness(theMovies) {
       movie.label = 'certified fresh';
     }
   })
-  console.log(movies);
+  return movies;
 }
 
-getMoviesFreshness(movies);
-
+console.log(getMoviesFreshness(movies));
 
 // Ne pas modifier l'export
 module.exports = getMoviesFreshness;

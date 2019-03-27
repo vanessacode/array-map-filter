@@ -38,11 +38,12 @@ const banned = ['bloody', 'damn'];
 
 function filterOffensiveComments(comments, bannedWords) {
   return comments.filter(function (comment) {
-    for (i = 0; i < bannedWords.length; i++) {
-      if((comment.includes(bannedWords[i]))=== false){
-        return comment;
+    for (i = 0; i <= bannedWords.length; i++) {
+      if(comment.toLowerCase().includes(banned[i])){
+        return false;
       }
     }
+    return true;
   });
 }
 
